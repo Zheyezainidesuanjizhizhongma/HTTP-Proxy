@@ -1,0 +1,16 @@
+Testcases:
+
+1.GET
+ http://info.cern.ch/hypertext/WWW/TheProject.html
+ http://www.testingmcafeesites.com/testcat_be.html
+ http://feedburner.google.com/fb/i/icn/feed-icon-10x10.gif
+ http://www.testingmcafeesites.com/testcat_au.html
+ http://www.testingmcafeesites.com/testcat_be.html
+ http://www.testingmcafeesites.com/testcat_bl.html
+
+2.POST
+ http://httpbin.org/forms/post
+
+3.CONNECT
+ https://www.google.com
+ https://www.youtube.com/

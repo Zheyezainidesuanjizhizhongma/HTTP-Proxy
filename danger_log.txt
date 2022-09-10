@@ -1,0 +1,11 @@
+1.Sometimes when I get the cached requests and need revalidate the request, I accidentally receive 2 responses.
+
+2.When we quickly ask for the same requests, sometimes it would be blocked and couldn’t display the pages smoothly.
+
+3.During running the process, we allocated too much space and data processing is not concise enough, resulting in a lot of external memory, and a  slow operation.
+
+4.When throwing the exception, It's not very detailed, it just returns 400/502, and it doesn't take into account anything else.
+
+5.When checking whether the response is fresh, we only consider three conditions, when max age is larger than the current age, when current time is earlier than the current time and when the no-cache exists in the cache-control. However, there are other conditions like s-maxage and max-stale.
+
+6.When designing the cache, we only use the hash map data structure instead of the normal one, hash map and doubly linked list data structure. Therefore, every time I need to store a get request and response pair, I emplace it at back, and if the number of pairs we stored exceeds the capacity of the hash map, we erase the beginning pair in the unordered_map, which is different from the definition of last recently used cache.
